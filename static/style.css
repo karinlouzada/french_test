@@ -13,16 +13,36 @@ p3 {
 body {
  background-image: url("./images/eiffel.jpg");
  background-color: #cccccc;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ font-family: sans-serif;
 }
 
 p{
   font-style: italic;
+}
+
+.button {
+  background-color: darkgreen
+  border: none;
+  color: darkgreen;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.button_art {
+  background-color: grey
+  border: none;
+  color: grey;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: monospace;
 }

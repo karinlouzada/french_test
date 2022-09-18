@@ -35,12 +35,15 @@ with open('french_nouns.csv', 'r', newline='') as csvfile:
 		m = re.search(r'[a-z]+', row[0])
 		n = re.search(r'[0-9]+', row[0])
 		num = (n.group(0))
-		if row[1] in ('le', 'la'):
-			eng.append(m.group(0))
-			art.append(row[1])
-			fre.append(row[2])
-		# else:
-		# 	print(num, row[1])
+		eng.append(m.group(0))
+		art.append(row[1])
+		word = row[2]
+		for i in range(3,len(row)): 
+			word = word+' '+row[i]
+		fre.append(word)
+
+
+
 
 # write the selected words to a new csv file
 with open('french_nouns_final.csv', 'w', newline='\n') as csvfile:
@@ -49,8 +52,8 @@ with open('french_nouns_final.csv', 'w', newline='\n') as csvfile:
 	for word in range(len(eng)):
 		spamwriter.writerow([eng[word], art[word], fre[word]])
 
-# call the function
-data = select_random_word()
-print (data)
+# # call the function
+# data = select_random_word()
+# print (data)
 
 

@@ -5,15 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Karin's French article test</title>
 	<link rel="stylesheet" href="./static/style.css" />
+	<link rel="icon" type="image/x-icon" href="./static/images/flag.png">
 </head>
+
 <body>
 
-	<p>Try to guess the gender of the common French noun...</p>
-	
-	<p1><h1>{{ English }}</h1></p>
+	<p><h3>Pour le deviner la sexe des noms français...</h3></p>
 
-	<p2><h2>Le  OU  La</h2></p>
-	
-	<p3><h1>{{ French }}</h1></p>
+	<p1><h1>English: {{ English }}</h1></p>
+
+
+
+	<script language="javascript">
+		var x = {{ Article|tojson }}
+		function feminine() {
+			if ( x == 'la') {
+				location.reload();
+			}
+		}
+		function masculine() {
+			if ( x == 'le') {
+				location.reload();	
+			}
+		}
+	</script>
+
+
+	<button class='button_art' onClick="masculine()">Masculine</button>
+	ou
+	<button class='button_art' onClick="feminine()">Feminine</button>
+
+
+	<p3><h1>French: {{ French }}</h1></p>
+
+
+
 </body>
 </html>
