@@ -12,7 +12,7 @@ def select_random_word():
 	my_file = os.path.join(THIS_FOLDER, 'french_nouns_final.csv')
 
 	
-	with open(new_path, 'r', newline='') as csvfile:
+	with open(my_file, 'r', newline='') as csvfile:
 		reader = csv.reader(csvfile, delimiter=',', quotechar='|')
 		for row in reader:
 			English.append(row[0])
