@@ -1,4 +1,4 @@
-import csv, random
+import csv, random, os
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
@@ -8,7 +8,9 @@ def select_random_word():
 	English = []
 	French = []
 	article = []
-	with open('french_nouns_final.csv', 'r', newline='') as csvfile:
+	path = os.getcwd()
+	new_path = os.path.join(path, 'french_nouns_final.csv')
+	with open(new_path, 'r', newline='') as csvfile:
 		reader = csv.reader(csvfile, delimiter=',', quotechar='|')
 		for row in reader:
 			English.append(row[0])
