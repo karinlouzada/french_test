@@ -8,11 +8,9 @@ def select_random_word():
 	English = []
 	French = []
 	article = []
-	path = os.getcwd()
-	if path == '/home/karinlouzada/':
-		new_path = os.path.join(path, 'french_test','french_nouns_final.csv')
-	else:
-		new_path = os.path.join(path,'french_nouns_final.csv')
+	THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+	my_file = os.path.join(THIS_FOLDER, 'french_nouns_final.csv')
+
 	
 	with open(new_path, 'r', newline='') as csvfile:
 		reader = csv.reader(csvfile, delimiter=',', quotechar='|')
