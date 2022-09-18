@@ -1,0 +1,28 @@
+p1 {
+  color: red;
+}
+
+p2 {
+  color: grey;
+}
+
+p3 {
+  color: blue;
+}
+
+body {
+ background-image: url("./images/eiffel.jpg");
+ background-color: #cccccc;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+p{
+  font-style: italic;
+}
