@@ -1,14 +1,8 @@
-p1 {
-  color: red;
+p {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
 }
 
-p2 {
-  color: grey;
-}
-
-p3 {
-  color: blue;
-}
 
 body {
  background-image: url("./images/eiffel.jpg");
@@ -19,9 +13,6 @@ body {
  font-family: sans-serif;
 }
 
-p{
-  font-style: italic;
-}
 
 .button {
   background-color: darkgreen
