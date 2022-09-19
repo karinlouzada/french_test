@@ -24,8 +24,13 @@ def select_random_word():
 	return English[i], French[i], article[i]
 
 
+@app.route('/french.html')
+def french():
+	data = select_random_word()
+	return render_template('french.html', English = data[0], French = data[1], Article = data[2]) 
+
 @app.route('/')
 def home():
 	data = select_random_word()
-	return render_template('french.html', English = data[0], French = data[1], Article = data[2]) 
+	return render_template('index.html') 
 
