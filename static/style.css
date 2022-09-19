@@ -1,3 +1,5 @@
+
+
 p {
   padding-left: ($spacer * .5) !important;
   padding-right: ($spacer * .5) !important;
@@ -6,34 +8,11 @@ p {
 
 body {
  background-image: url("./images/eiffel.jpg");
- background-color: #cccccc;
+ background-color: black;
  background-position: center;
  background-size: cover;
  background-repeat: no-repeat;
  font-family: sans-serif;
 }
 
-
-.button {
-  background-color: darkgreen
-  border: none;
-  color: darkgreen;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: monospace;
-}
-
-.button_art {
-  background-color: grey
-  border: none;
-  color: grey;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: monospace;
-}
+select.form-select{display:inline-block}
