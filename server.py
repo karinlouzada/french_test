@@ -31,6 +31,22 @@ def french():
 
 @app.route('/')
 def home():
-	data = select_random_word()
 	return render_template('index.html') 
+
+@app.route('/resume.html')
+def resume():
+	return render_template('resume.html') 
+
+@app.route('/gallery.html')
+def gallery():
+	return render_template('gallery.html') 
+
+@app.route('/gridder.html')
+def gridder():
+	return render_template('gridder.html') 
+
+@app.route('/boggle.html')
+def boggle():
+	return render_template('boggle.html') 
+
 
